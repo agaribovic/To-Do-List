@@ -14,7 +14,9 @@ body {
 
 #input {
     width: 30vw;
+    height: 4vh;
 }
+
 
 #input:focus {
     font-size: medium;
