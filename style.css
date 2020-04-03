@@ -44,13 +44,5 @@ body {
    color: #0244FC;
 }
 
-@media screen and (max-device-width: 1920px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-    #lista {
-    margin-left:15px;
-    }
-    
-}
 
 
