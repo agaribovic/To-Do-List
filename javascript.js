@@ -33,8 +33,11 @@ document.getElementById("input").addEventListener("keyup", function (e) {
       function deleteTask(event) {
         this.parentElement.style.display = "none";
 
-        if (document.getElementById("lista").lastChild.style.display == "none")
+        if (document.getElementById("lista").lastChild.style.display == "none") {
           button.style.display = "none";
+          selectAll.style.display = "none";
+          checkBox.style.display = "none";
+        }
 
         event.stopPropagation();
       }
