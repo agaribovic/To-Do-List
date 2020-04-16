@@ -25,10 +25,10 @@ switch (weekDay) {
     weekDay = "Thursday";
     break;
   case 5:
-    weekday = "Friday";
+    weekDay = "Friday";
     break;
   case 6:
-    weekday = "Saturday";
+    weekDay = "Saturday";
     break;
 }
 
