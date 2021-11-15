@@ -1,8 +1,34 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>TO DO LIST vol. 2</title><link rel="stylesheet" href="style.css"><style>.taskCompleted{text-decoration:line-through}</style></head><body><input id="unos"> <button onclick="unesi()">Add Task</button><ol id="ispis"></ol><button id="deleteAll" onclick="document.getElementById(&quot;ispis&quot;).innerHTML=&quot;&quot;" style="display:none">Delete All</button><script type="text/javascript">function unesi() {
-    let task = document.getElementById("unos").value;
-    let ispis = document.getElementById("ispis");
-   document.getElementById("deleteAll").style.display = "block";
-    
-    ispis.innerHTML += "<li>" + "<span onclick=this.classList.toggle('taskCompleted')>" + task + "</span>" + "  <span style='color:red' onclick='this.parentElement.remove();'>Remove</span>  <input type='text' placeholder='Edit Task' onchange='this.parentElement.innerHTML = this.value;'/></li>";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To-Do List Vol. 2</title>
+    <style>
+      .taskCompleted {
+        text-decoration:line-through;
+      }
+    </style>
+  </head>
+<body>
+
+<input type="text" id="input" placeholder="Add a task">
+<button onclick="inputTask()">Add Task</button>
+
+<ol id="result"></ol>
+
+<script>
+function inputTask() {
   
-  }</script></body></html>
+  let task = document.getElementById("input").value;
+  let result = document.getElementById("result");
+
+  
+  if (task != '') {
+    
+  result.innerHTML += "<li>" + "<span onclick=this.classList.toggle('taskCompleted') style='margin-right:10px'>" + task + "</span>" + "<span style='color:red; margin-right:10px;'  onclick='this.parentElement.remove();'>Remove</span><input type='text' placeholder='Edit Task' onchange='this.previousSibling.previousSibling.innerHTML = this.value; this.value = this.placeholder'></li>";
+
+  }
+
+}
+</script>
+</body>
+</html>
